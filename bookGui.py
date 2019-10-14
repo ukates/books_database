@@ -12,6 +12,7 @@ User can:
     Close
 """
 from tkinter import *
+import bookBackend
 
 window = Tk() #create window
 
@@ -24,7 +25,7 @@ l2.grid(row = 0, column = 2)
 l3 = Label(window, text = "Year")
 l3.grid(row = 1, column = 0)
 
-l4 = Label(window, text = "IBSN")
+l4 = Label(window, text = "ISBN")
 l4.grid(row = 1, column = 2)
 
 title_text = StringVar() # assign input to variable
@@ -40,7 +41,7 @@ e3 = Entry(window, textvariable = year_text)
 e3.grid(row = 1, column = 1)
 
 ibsn_text = StringVar()
-e4 = Entry(window, textvariable = ibsn_text)
+e4 = Entry(window, textvariable = isbn_text)
 e4.grid(row = 1, column = 3)
 
 list1 = Listbox(window, height = 6, width = 35) #create list box to display info
@@ -70,4 +71,4 @@ b5.grid(row = 6, column = 3)
 b6 = Button(window, text = "Close", width = 12)
 b6.grid(row = 7, column = 3)
 
-window.mainloop() 
+window.mainloop()
